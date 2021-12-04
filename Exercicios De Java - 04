@@ -13,3 +13,46 @@ public class HoraDoSistema {
     }
     
 }
+
+.
+
+public class IdiomaDoSistema {
+    //percebisse que é mais fácil e rápido colocar o getProperty direto no Sout.
+    public static void main(String[] args) {
+        System.out.println("Linguagem: "+System.getProperty("user.language"));
+        System.out.println("País: "+System.getProperty("user.country"));
+    } 
+  OU
+}
+ import java.util.Locale;
+public class IdiomaDoSistema {   
+    public static void main(String[] args) {
+         Locale loc = Locale.getDefault();
+   System.out.print("o seu sistema esta configurado para ");
+   System.out.println (loc.getDisplayLanguage());
+   System.out.println (loc.getLanguage());
+   
+
+  }
+}
+.
+
+package ResolucçaoDeTela;
+
+import javax.swing.JFrame;
+import java.awt.Dimension;
+
+public class ResoluçãoTela 
+{
+    public static void main(String[] args) 
+    {
+      
+         JFrame janela = new JFrame();
+         
+          Dimension dim = janela.getToolkit().getScreenSize();
+          
+    System.out.println("A largura em pixel da tela é:"+ dim.width);
+    System.out.println("A altura em pixel é:%d "+dim.height);
+    
+    }
+}
